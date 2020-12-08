@@ -55,7 +55,7 @@ public class Main {
             writer.println("Ученики с оценкой ниже 3:");
             for (String studies : readStudies) {
                 String[] splitArr = studies.split(" ");
-                int mark = Integer.valueOf(splitArr[2]);
+                int mark = Integer.parseInt(splitArr[2]);
                 if (mark < 3) {
                     writer.println(String.format("%s %s", splitArr[0], splitArr[1]));
                 }
@@ -63,7 +63,7 @@ public class Main {
             }
             writer.println("\n" + "Средний балл по классу: ");
             double avg = sum / (1.0d * count);
-            writer.println(String.valueOf(String.format("%.2f", avg)));
+            writer.println(String.format("%.2f", avg));
             writer.flush();
 //            System.out.println("\n" + String.format("%.2f", avg));
         } catch (IOException e) {
